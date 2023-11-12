@@ -302,7 +302,7 @@ function getSumToN(n) {
 function getSumOfDigits(num) {
   const arr = Array.from(String(num), Number);
   let sum = 0;
-  arr.forEach(function (numm) {
+  arr.forEach(function reducer(numm) {
     sum += numm;
   });
   return sum;
@@ -319,8 +319,8 @@ function getSumOfDigits(num) {
  *   16  => true
  *   15  => false
  */
-function isPowerOfTwo(/* num */) {
-  throw new Error('Not implemented');
+function isPowerOfTwo(num) {
+  return (Math.log(num) / Math.log(2)) % 1 === 0;
 }
 
 /**
@@ -333,8 +333,8 @@ function isPowerOfTwo(/* num */) {
  *   0 => 0
  *   Math.PI / 2 => 1
  */
-function getSine(/* num */) {
-  throw new Error('Not implemented');
+function getSine(num) {
+  return Math.sin(num);
 }
 
 /**
